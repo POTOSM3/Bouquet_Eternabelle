@@ -3,76 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bouquet Eternabelle</title>
+  <title>Bouquet Eternabelle | Flores que no se marchitan</title>
+  <meta name="description" content="Ramos y arreglos artesanales hechos a tu medida. Graduaciones, Día de la Madre, bodas y más. Pedidos por WhatsApp: 7774-5924.">
+  <meta name="theme-color" content="#c23a69">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🌸 Bouquet Eternabelle🌸</h1>
-    <nav>
-      <a href="#madre">Día de la Madre</a>
-      <a href="#novia">Día de la Novia</a>
-      <a href="#novio">Día del Novio</a>
-      <a href="#amarillas">Flores Amarillas</a>
-      <a href="#difuntos">Día de los Difuntos</a>
-      <a href="#boda">Bodas</a>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ENCABEZADO -->
+  <header class="cabecera">
+    <a class="marca" href="#inicio">Bouquet Eternabelle</a>
+    <nav class="menu" aria-label="Ocasiones">
+      <ul>
+        <li><a href="#graduaciones">Graduaciones</a></li>
+        <li><a href="#madre">Día de la Madre</a></li>
+        <li><a href="#novia">Día de la Novia</a></li>
+        <li><a href="#novio">Día del Novio</a></li>
+        <li><a href="#amarillas">Flores amarillas</a></li>
+        <li><a href="#difuntos">Día de los Difuntos</a></li>
+        <li><a href="#boda">Bodas</a></li>
+      </ul>
     </nav>
+    <a class="btn btn--chico" data-wa href="https://wa.me/50377745924" target="_blank" rel="noopener">Pedir por WhatsApp</a>
   </header>
 
-  <main>
-    <section id="madre">
-      <h2>🌷 Día de la Madre</h2>
-      <div class="galeria">
-        <img src="img/madre/m1.jpg" alt="Ramo día de la madre">
-        <img src="img/madre/m2.jpg" alt="Arreglo día de la madre">
+  <main id="contenido">
+
+    <!-- PORTADA -->
+    <section class="portada" id="inicio">
+      <div class="portada__texto">
+        <h1>Flores que no se marchitan</h1>
+        <p>Ramos y arreglos artesanales hechos a tu medida. Cuéntanos la ocasión y lo armamos para ti.</p>
+        <div class="portada__acciones">
+          <a class="btn" data-wa href="https://wa.me/50377745924" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          <a class="btn btn--suave" href="#graduaciones">Ver graduaciones 2026</a>
+        </div>
+      </div>
+
+      <!-- Flor hecha con trazos gruesos y bordes afelpados, como flor de chenille -->
+      <svg class="portada__flor" viewBox="0 0 400 480" role="img" aria-label="Ilustración de una flor rosa con tallo y hojas">
+        <defs>
+          <filter id="felpa" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="ruido"/>
+            <feDisplacementMap in="SourceGraphic" in2="ruido" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+        </defs>
+        <g filter="url(#felpa)" fill="none" stroke-linecap="round">
+          <!-- tallo y hojas -->
+          <path d="M200 250 C 190 330, 215 400, 200 475" stroke="#5f7f55" stroke-width="14"/>
+          <path d="M203 380 C 250 350, 285 355, 310 330" stroke="#5f7f55" stroke-width="22"/>
+          <path d="M198 420 C 150 395, 115 400, 90 370" stroke="#5f7f55" stroke-width="22"/>
+          <!-- pétalos exteriores -->
+          <g stroke="#ff8fab" stroke-width="40" transform="translate(200 200)">
+            <path d="M0 0 V-135"/>
+            <path d="M0 0 V-135" transform="rotate(36)"/>
+            <path d="M0 0 V-135" transform="rotate(72)"/>
+            <path d="M0 0 V-135" transform="rotate(108)"/>
+            <path d="M0 0 V-135" transform="rotate(144)"/>
+            <path d="M0 0 V-135" transform="rotate(180)"/>
+            <path d="M0 0 V-135" transform="rotate(216)"/>
+            <path d="M0 0 V-135" transform="rotate(252)"/>
+            <path d="M0 0 V-135" transform="rotate(288)"/>
+            <path d="M0 0 V-135" transform="rotate(324)"/>
+          </g>
+          <!-- pétalos interiores -->
+          <g stroke="#e2557f" stroke-width="30" transform="translate(200 200) rotate(18)">
+            <path d="M0 0 V-92"/>
+            <path d="M0 0 V-92" transform="rotate(36)"/>
+            <path d="M0 0 V-92" transform="rotate(72)"/>
+            <path d="M0 0 V-92" transform="rotate(108)"/>
+            <path d="M0 0 V-92" transform="rotate(144)"/>
+            <path d="M0 0 V-92" transform="rotate(180)"/>
+            <path d="M0 0 V-92" transform="rotate(216)"/>
+            <path d="M0 0 V-92" transform="rotate(252)"/>
+            <path d="M0 0 V-92" transform="rotate(288)"/>
+            <path d="M0 0 V-92" transform="rotate(324)"/>
+          </g>
+          <!-- centro dorado -->
+          <circle cx="200" cy="200" r="34" stroke="#c49a4b" stroke-width="16"/>
+          <circle cx="200" cy="200" r="12" stroke="#8a6a2c" stroke-width="12"/>
+        </g>
+      </svg>
+    </section>
+
+    <!-- CATÁLOGO DE GRADUACIONES (se genera desde script.js) -->
+    <section class="graduaciones" id="graduaciones" aria-labelledby="tit-grad">
+      <div class="contenedor">
+        <header class="graduaciones__intro">
+          <h2 id="tit-grad">Graduaciones 2026</h2>
+          <p>Detalles hechos para celebrar grandes logros. Todos los arreglos se personalizan con el nombre, los colores y el mensaje que quieras.</p>
+          <p class="graduaciones__precio">Para conocer el precio de cada arreglo, escríbenos por WhatsApp.</p>
+          <a class="enlace-oro" href="catalogo-graduaciones-2026.pdf" download>Descargar catálogo en PDF</a>
+        </header>
+
+        <div class="etiquetas" id="catalogo">
+          <noscript><p class="aviso">Activa JavaScript para ver el catálogo, o descarga el PDF.</p></noscript>
+        </div>
       </div>
     </section>
 
-    <section id="novia">
-      <h2>💐 Día de la Novia</h2>
-      <div class="galeria">
-        <img src="img/novia/n1.jpg" alt="Ramo día de la novia">
-        <img src="img/novia/n2.jpg" alt="Arreglo romántico">
-      </div>
-    </section>
+    <!-- OTRAS OCASIONES -->
+    <div class="contenedor ocasiones">
 
-    <section id="novio">
-      <h2>🌹 Día del Novio</h2>
-      <div class="galeria">
-        <img src="img/novio/no1.jpg" alt="Arreglo día del novio">
-        <img src="img/novio/no2.jpg" alt="Caja floral">
-      </div>
-    </section>
+      <section id="madre">
+        <h2><span aria-hidden="true">🌷</span> Día de la Madre</h2>
+        <div class="galeria">
+          <button class="foto" type="button" data-zoom><img src="img/madre/m1.jpg" alt="Ramo para el Día de la Madre" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/madre/m2.jpg" alt="Arreglo floral para el Día de la Madre" loading="lazy"></button>
+        </div>
+      </section>
 
-    <section id="amarillas">
-      <h2>🌻 Flores Amarillas</h2>
-      <div class="galeria">
-        <img src="img/amarillas/a1.jpg" alt="Flores amarillas">
-        <img src="img/amarillas/a2.jpg" alt="Arreglo amarillo">
-      </div>
-    </section>
+      <section id="novia">
+        <h2><span aria-hidden="true">💐</span> Día de la Novia</h2>
+        <div class="galeria">
+          <button class="foto" type="button" data-zoom><img src="img/novia/n1.jpg" alt="Ramo para el Día de la Novia" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/novia/n2.jpg" alt="Arreglo romántico" loading="lazy"></button>
+        </div>
+      </section>
 
-    <section id="difuntos">
-      <h2>🕊️ Día de los Difuntos</h2>
-      <div class="galeria">
-        <img src="img/difuntos/imagen1D.jpg" alt="Corona de flores">
-        <img src="img/difuntos/imagen2D.jpg" alt="Arreglo con lirios">
-        <img src="img/difuntos/imagen3D.jpg" alt="Corona de flores">
-        <img src="img/difuntos/imagen4D.jpg" alt="Arreglo con lirios">
-      </div>
-    </section>
+      <section id="novio">
+        <h2><span aria-hidden="true">🌹</span> Día del Novio</h2>
+        <div class="galeria">
+          <button class="foto" type="button" data-zoom><img src="img/novio/no1.jpg" alt="Arreglo para el Día del Novio" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/novio/no2.jpg" alt="Caja floral para el Día del Novio" loading="lazy"></button>
+        </div>
+      </section>
 
-    <section id="boda">
-      <h2>💒 Bodas</h2>
-      <div class="galeria">
-        <img src="img/boda/b1.jpg" alt="Arreglo de boda">
-        <img src="img/boda/b2.jpg" alt="Ramo de novia">
+      <section id="amarillas">
+        <h2><span aria-hidden="true">🌻</span> Flores amarillas</h2>
+        <div class="galeria">
+          <button class="foto" type="button" data-zoom><img src="img/amarillas/a1.jpg" alt="Ramo de flores amarillas" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/amarillas/a2.jpg" alt="Arreglo en tonos amarillos" loading="lazy"></button>
+        </div>
+      </section>
+
+      <section id="difuntos">
+        <h2><span aria-hidden="true">🕊️</span> Día de los Difuntos</h2>
+        <div class="galeria">
+          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen1D.jpg" alt="Corona de flores, primer diseño" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen2D.jpg" alt="Arreglo con lirios, primer diseño" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen3D.jpg" alt="Corona de flores, segundo diseño" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen4D.jpg" alt="Arreglo con lirios, segundo diseño" loading="lazy"></button>
+        </div>
+      </section>
+
+      <section id="boda">
+        <h2><span aria-hidden="true">💒</span> Bodas</h2>
+        <div class="galeria">
+          <button class="foto" type="button" data-zoom><img src="img/boda/b1.jpg" alt="Arreglo para boda" loading="lazy"></button>
+          <button class="foto" type="button" data-zoom><img src="img/boda/b2.jpg" alt="Ramo de novia" loading="lazy"></button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <div class="contenedor contacto__caja">
+        <h2>¿Tienes una ocasión en mente?</h2>
+        <p>Pedidos y cotizaciones por WhatsApp: <strong>7774-5924</strong></p>
+        <a class="btn" data-wa href="https://wa.me/50377745924" target="_blank" rel="noopener">Escribir por WhatsApp</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Bouquet Eternabelle| Diseñado con amor 💐</p>
+  <footer class="pie">
+    <p>© <span id="anio">2026</span> Bouquet Eternabelle. Diseñado con amor <span aria-hidden="true">💐</span></p>
   </footer>
+
+  <!-- Botón flotante para celulares -->
+  <a class="wa-flotante" data-wa href="https://wa.me/50377745924" target="_blank" rel="noopener">WhatsApp</a>
+
+  <!-- Visor de fotos -->
+  <dialog class="visor" id="visor" aria-label="Foto ampliada">
+    <form method="dialog"><button class="visor__cerrar" aria-label="Cerrar">Cerrar</button></form>
+    <img id="visor-img" alt="">
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
