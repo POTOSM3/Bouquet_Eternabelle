@@ -7,14 +7,14 @@ Pedidos y cotizaciones por WhatsApp: 7774-5924.
 
 - `index.html`: estructura de la página
 - `style.css`: diseño
-- `script.js`: catálogo de graduaciones, visor de fotos y enlaces de WhatsApp
+- `script.js`: catálogos de graduaciones y Día de los Difuntos, visor de fotos y enlaces de WhatsApp
 - `catalogo-graduaciones-2026.pdf`: catálogo para descargar
-- `img/`: fotos, una carpeta por ocasión (`madre`, `novia`, `novio`, `amarillas`, `difuntos`, `boda`, `graduacion`)
+- `img/`: fotos, una carpeta por ocasión (`madre`, `novia`, `novio`, `amarillas`, `difuntos`, `boda`, `graduacion`). Las rutas de `graduacion` y `difuntos` se cambian al inicio de `script.js`
 
-## Agregar un arreglo al catálogo de graduaciones
+## Agregar un arreglo a un catálogo (graduaciones o difuntos)
 
 1. Guarda la foto en `img/graduacion/`.
-2. Abre `script.js` y copia uno de los bloques de la lista `PRODUCTOS`.
+2. Abre `script.js` y copia uno de los bloques de la lista `PRODUCTOS` (graduaciones) o `PRODUCTOS_DIFUNTOS`.
 3. Cambia `nombre`, `detalle`, `foto` y `alt`.
 
 ## Ver la página en tu computadora

@@ -221,37 +221,54 @@ button:focus-visible {
   .portada__flor { max-width: 240px; justify-self: start; }
 }
 
-/* ---- GRADUACIONES (catálogo) ---- */
-.graduaciones {
-  background: var(--tinta);
+/* ---- CATÁLOGOS (graduaciones y difuntos) ---- */
+.catalogo {
+  --fondo-cat: var(--tinta);
+  --acento-cat: var(--oro-claro);
+  --borde-cat: var(--oro);
+  background: var(--fondo-cat);
   color: #f7e9ee;
-  border-top: 4px solid var(--oro);
+  border-top: 4px solid var(--borde-cat);
   padding-block: clamp(3rem, 8vw, 6rem);
 }
 
-.graduaciones__intro { max-width: 42rem; }
+/* Graduaciones: negro y dorado, como el papel de los ramos */
+.catalogo--graduaciones {
+  --fondo-cat: var(--tinta);
+  --acento-cat: var(--oro-claro);
+  --borde-cat: var(--oro);
+}
 
-.graduaciones__intro h2 {
+/* Difuntos: violeta profundo y lila, como las coronas moradas y blancas */
+.catalogo--difuntos {
+  --fondo-cat: #2d1b3d;
+  --acento-cat: #dcc6f2;
+  --borde-cat: #a888cc;
+}
+
+.catalogo__intro { max-width: 42rem; }
+
+.catalogo__intro h2 {
   margin: 0 0 1rem;
   font-size: clamp(2.2rem, 5.5vw, 3.6rem);
-  color: var(--oro-claro);
+  color: var(--acento-cat);
 }
 
-.graduaciones__intro p { margin: 0 0 0.75rem; }
+.catalogo__intro p { margin: 0 0 0.75rem; }
 
-.graduaciones__precio { font-weight: 700; color: #fff; }
+.catalogo__precio { font-weight: 700; color: #fff; }
 
-.enlace-oro {
+.enlace-cat {
   display: inline-block;
   margin-top: 0.25rem;
-  color: var(--oro-claro);
+  color: var(--acento-cat);
   text-underline-offset: 4px;
 }
-.enlace-oro:hover { color: #fff; }
-.graduaciones a:focus-visible,
-.graduaciones button:focus-visible { outline-color: var(--oro-claro); }
+.enlace-cat:hover { color: #fff; }
+.catalogo a:focus-visible,
+.catalogo button:focus-visible { outline-color: var(--acento-cat); }
 
-.aviso { color: var(--oro-claro); }
+.aviso { color: var(--acento-cat); }
 
 .etiquetas {
   display: grid;
@@ -296,7 +313,7 @@ button:focus-visible {
   width: 2px;
   height: calc(2.5rem + 24px);
   margin-left: -1px;
-  background: var(--oro-claro);
+  background: var(--acento-cat, var(--oro-claro));
   z-index: 1;
 }
 
@@ -310,8 +327,8 @@ button:focus-visible {
   height: 16px;
   margin-left: -8px;
   border-radius: 50%;
-  background: var(--tinta);
-  box-shadow: 0 0 0 3px var(--oro);
+  background: var(--fondo-cat, var(--tinta));
+  box-shadow: 0 0 0 3px var(--borde-cat, var(--oro));
   z-index: 2;
 }
 

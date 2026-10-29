@@ -22,11 +22,11 @@
     <nav class="menu" aria-label="Ocasiones">
       <ul>
         <li><a href="#graduaciones">Graduaciones</a></li>
+        <li><a href="#difuntos">Día de los Difuntos</a></li>
         <li><a href="#madre">Día de la Madre</a></li>
         <li><a href="#novia">Día de la Novia</a></li>
         <li><a href="#novio">Día del Novio</a></li>
         <li><a href="#amarillas">Flores amarillas</a></li>
-        <li><a href="#difuntos">Día de los Difuntos</a></li>
         <li><a href="#boda">Bodas</a></li>
       </ul>
     </nav>
@@ -93,17 +93,32 @@
     </section>
 
     <!-- CATÁLOGO DE GRADUACIONES (se genera desde script.js) -->
-    <section class="graduaciones" id="graduaciones" aria-labelledby="tit-grad">
+    <section class="catalogo catalogo--graduaciones" id="graduaciones" aria-labelledby="tit-grad">
       <div class="contenedor">
-        <header class="graduaciones__intro">
+        <header class="catalogo__intro">
           <h2 id="tit-grad">Graduaciones 2026</h2>
           <p>Detalles hechos para celebrar grandes logros. Todos los arreglos se personalizan con el nombre, los colores y el mensaje que quieras.</p>
-          <p class="graduaciones__precio">Para conocer el precio de cada arreglo, escríbenos por WhatsApp.</p>
-          <a class="enlace-oro" href="catalogo-graduaciones-2026.pdf" download>Descargar catálogo en PDF</a>
+          <p class="catalogo__precio">Para conocer el precio de cada arreglo, escríbenos por WhatsApp.</p>
+          <a class="enlace-cat" href="catalogo-graduaciones-2026.pdf" download>Descargar catálogo en PDF</a>
         </header>
 
-        <div class="etiquetas" id="catalogo">
+        <div class="etiquetas" id="catalogo-graduaciones">
           <noscript><p class="aviso">Activa JavaScript para ver el catálogo, o descarga el PDF.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DÍA DE LOS DIFUNTOS (se genera desde script.js) -->
+    <section class="catalogo catalogo--difuntos" id="difuntos" aria-labelledby="tit-dif">
+      <div class="contenedor">
+        <header class="catalogo__intro">
+          <h2 id="tit-dif">Día de los Difuntos</h2>
+          <p>Coronas, cruces, macetas y angelitos para recordar a quienes queremos. Cuéntanos los colores y el tamaño que prefieres.</p>
+          <p class="catalogo__precio">Para cotizar tu arreglo, escríbenos por WhatsApp.</p>
+        </header>
+
+        <div class="etiquetas" id="catalogo-difuntos">
+          <noscript><p class="aviso">Activa JavaScript para ver el catálogo.</p></noscript>
         </div>
       </div>
     </section>
@@ -140,16 +155,6 @@
         <div class="galeria">
           <button class="foto" type="button" data-zoom><img src="img/amarillas/a1.jpg" alt="Ramo de flores amarillas" loading="lazy"></button>
           <button class="foto" type="button" data-zoom><img src="img/amarillas/a2.jpg" alt="Arreglo en tonos amarillos" loading="lazy"></button>
-        </div>
-      </section>
-
-      <section id="difuntos">
-        <h2><span aria-hidden="true">🕊️</span> Día de los Difuntos</h2>
-        <div class="galeria">
-          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen1D.jpg" alt="Corona de flores, primer diseño" loading="lazy"></button>
-          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen2D.jpg" alt="Arreglo con lirios, primer diseño" loading="lazy"></button>
-          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen3D.jpg" alt="Corona de flores, segundo diseño" loading="lazy"></button>
-          <button class="foto" type="button" data-zoom><img src="img/difuntos/imagen4D.jpg" alt="Arreglo con lirios, segundo diseño" loading="lazy"></button>
         </div>
       </section>
 
