@@ -238,12 +238,37 @@ function activarWhatsApp() {
 }
 
 /* ---------------------------------------------------------
+   4) Movimiento en celulares
+   Sin mouse no existe el "pasar por encima", así que cada etiqueta
+   se balancea una sola vez cuando aparece en pantalla.
+   --------------------------------------------------------- */
+function activarBalanceoTactil() {
+  const sinMouse = window.matchMedia("(hover: none)").matches;
+  const sinReduccion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!sinMouse || !sinReduccion || !("IntersectionObserver" in window)) return;
+
+  const vigilante = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (entrada) {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("balancea");
+        vigilante.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll(".etiqueta").forEach(function (etiqueta) {
+    vigilante.observe(etiqueta);
+  });
+}
+
+/* ---------------------------------------------------------
    Inicio
    --------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", function () {
   pintarCatalogo("catalogo-graduaciones", PRODUCTOS, "graduación");
   pintarCatalogo("catalogo-difuntos", PRODUCTOS_DIFUNTOS, "Día de los Difuntos");
   activarVisor();
+  activarBalanceoTactil();
   activarWhatsApp();
 
   const anio = document.getElementById("anio");

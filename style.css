@@ -397,6 +397,12 @@ button:focus-visible {
   100% { transform: rotate(var(--giro)); }
 }
 
+/* En celulares (sin mouse), cada etiqueta se balancea una vez al aparecer en pantalla.
+   La clase "balancea" la pone script.js */
+@media (prefers-reduced-motion: no-preference) {
+  .etiqueta.balancea { animation: balanceo 1.3s ease-in-out; }
+}
+
 /* ---- OTRAS OCASIONES ---- */
 .ocasiones {
   padding-block: clamp(3rem, 7vw, 5rem);
